@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product page</title>
+  <style type="text/css" media="all">
+    @media only screen and (min-width:240px) and (max-width:500px) {
+
+      * {
+        margin: 0;
+      }
+
+      body {
+        background-color: #FFFFFF;
+      }
+
+      .colorfield input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #999;
+        transition: 0.2s all linear;
+        margin-right: 10px;
+        position: relative;
+        top: 4px;
+      }
+
+      #red {
+        background-color: red;
+      }
+
+      #black {
+        background-color: black;
+      }
+
+      #blue {
+        background-color: blue;
+      }
+
+      #yellow {
+        background-color: yellow;
+      }
+
+      #red:checked {
+        border: 21px double red;
+      }
+
+      #black:checked {
+        border: 21px double black;
+      }
+
+      #blue:checked {
+        border: 21px double blue;
+      }
+
+      #yellow:checked {
+        border: 21px double yellow;
+      }
+
+      .sizes input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+
+        border-radius: 50%;
+        background-color: white;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #999;
+        transition: 0.2s all linear;
+        margin-right: 15px;
+        position: relative;
+        top: 4px;
+      }
+
+      .sizes input:checked {
+        border: 15px double black;
+        background-color: #847C7C;
+      }
+
+
+
+      .productpage {
+        box-sizing: border-box;
+        border: 1px solid aqua;
+      }
+
+      .productimg {
+        width: 100%;
+        height: 460px;
+        border-bottom: 2px solid aqua;
+
+      }
+
+      .price {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.3rem;
+        margin: 10px 10px;
+      }
+
+      .price span:nth-child(1) {
+        color: red;
+      }
+
+      .price span:nth-child(2) {
+        text-decoration-line: line-through;
+        text-decoration-color: red;
+      }
+
+      .price span:nth-child(3) {
+        color: red;
+      }
+
+      .price span:nth-child(4) {
+        color: black;
+        display: block;
+        padding-left: 68px;
+      }
+
+      footer {
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #000000;
+        border-top: 1px solid #000000;
+        overflow: hidden;
+
+      }
+
+      footer button:active {
+        color: #C40101;
+      }
+
+      footer button {
+        height: 34px;
+        border-color: whitesmoke;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-size: 1.3rem;
+        text-shadow: 2px 1px 2px #000000;
+        color: whitesmoke;
+        background-color: #CE5AFB;
+      }
+
+      footer button:nth-child(1) {
+        width: 18%;
+        margin-left: -1px;
+      }
+
+      footer button:nth-child(2) {
+        width: 16%;
+        margin-left: -3px;
+      }
+
+      footer button:nth-child(3) {
+        width: 33%;
+        margin-left: -3px;
+      }
+
+      footer button:nth-child(4) {
+        width: 32%;
+        margin-left: -3px;
+      }
+
+      .description {
+        padding: 10px;
+      }
+
+      .description p:nth-child(1) {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.7rem;
+        padding-bottom: 4px;
+
+      }
+
+      .description p:nth-child(2) {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.4rem;
+        padding-bottom: 30px;
+        text-shadow: 2px 2px 6px #000000;
+      }
+
+      .description p:nth-child(3) {
+        font-size: 1.2rem;
+      }
+
+      .description span {
+        font-size: .9rem;
+        color: #0015FF;
+      }
+
+      legend,
+      lebel {
+        background-color: #FFFFFF;
+        color: #868DDE;
+        font-size: 1.2rem;
+      }
+
+      .radiobuttons {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-bottom: 30px;
+        width: 80%;
+      }
+
+      .colorfield {
+        background-color: #FFFFFF;
+        border: 3px solid #F5F5F5;
+      }
+
+      .sizefild {
+        margin-top: 10px;
+        background-color: #FFFFFF;
+        border: 3px solid #F5F5F5;
+      }
+
+      .reviews {
+        width: 90%;
+        border: 1px solid white;
+        margin-left: 15px;
+      }
+
+      .reviews p {
+        font-size: 1.8rem;
+        padding-bottom: 20px;
+      }
+
+      .stars {
+        width: 80%;
+        height: 40px;
+        text-align: left;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        padding-bottom: 40px;
+        border: 3px solid #F3F3F3;
+      }
+
+      .stars legend {
+        background: #FFFFFF;
+        color: #8085BB;
+      }
+
+      textarea {
+        width: 93%;
+        height: 60px;
+        padding: 10px;
+        font-size: 1.2rem;
+        border: 3px solid #EEEEEE;
+      }
+
+      textarea:active {
+        background-color: black;
+        color: white;
+      }
+
+      #submitreview {
+        width: 100%;
+        height: 30px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-align: center;
+        background-color: #1983FF;
+        color: whitesmoke;
+        border: 1px solid white;
+        border-radius: 10px;
+      }
+
+      #submitreview:active {
+        color: orangered;
+        border: 2px solid gray;
+      }
+
+
+
+      .rating>span:hover:before {
+        content: "\2605";
+        position: absolute;
+      }
+
+      .rating {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+      }
+
+      .rating>span:hover:before,
+      .rating>span:hover~span:before {
+        content: "\2605";
+        position: absolute;
+      }
+
+      .rating {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+      }
+
+      .rating>span {
+        display: inline-block;
+        position: relative;
+        width: 1.1em;
+      }
+
+      .rating>span:hover:before,
+      .rating>span:hover~span:before {
+        content: "\2605";
+        position: absolute;
+      }
+
+
+
+    }
+  </style>
+  <link rel="stylesheet" href="sproductpage.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <div class="productpage">
+    <img class="productimg" src="IMG.jpg" alt="Product1" />
+    <div class="price">
+      <span>Price : </span>
+      <span>Tk 690</span>
+      <span>29% off : </span>
+      <span>Tk 490</span>
+    </div>
+    <div class="description">
+      <p>Men sweater for comfort</p>
+      <p>Bindas Brand#</p>
+      <p>This is sweater for men only. It have 3 sizes and 4 colors available. No guarentee or warranty available. But generally it don't change the color for at least 25 washes. So it's a great product on reasonable price. It is in stock right now. </p>
+      <span>Delivery time : min 3days to maximum 7days.</span>
+    </div>
+    <div class="radiobuttons">
+      <fieldset class="colorfield">
+        <legend><span>Select Color Family :</span></legend>
+        <input type="radio" name="colors" id="red" value="red" />
+        <input type="radio" name="colors" id="black" value="black" />
+        <input type="radio" name="colors" id="blue" value="blue" />
+        <input type="radio" name="colors" id="yellow" value="yellow" />
+      </fieldset>
+      <fieldset class="sizefild">
+        <legend><span>Select Size :</span></legend>
+        <div class="sizes">
+          <level for="s">S</level>
+          <input type="radio" name="sizes" id="s" value="s" />
+          <level for="m">M</level>
+          <input type="radio" name="sizes" id="m" value="m" />
+          <level for="l">L</level>
+          <input type="radio" name="sizes" id="l" value="l" />
+          <level for="xl">XL</level>
+          <input type="radio" name="sizes" id="xl" value="xl" />
+          <level for="xxl">XXL</level>
+          <input type="radio" name="sizes" id="xxl" value="xxl" />
+        </div>
+      </fieldset>
+    </div>
+    <div class="reviews">
+      <p>Reviews : <span>&#9733 &#9733 &#9733 &#9734 &#9734</span></p>
+      <fieldset class="stars">
+        <legend><span>Give stars: </span></legend>
+        <div class="rating">
+          <span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span>
+        </div>
+      </fieldset>
+      <textarea name="review" id=review rows="4" cols="30" placeholder="Write down your experience about this product &#127775"></textarea>
+      <button id="submitreview" class="button" type="submit">Submit</button>
+    </div>
+  </div>
+  </div>
+  <footer class="footer">
+    <a href="index.html"><button class="homebutton" type="submit">Home</button></a>
+    <button class="chatbutton" type="submit">Chat</button>
+    <button class="addbutton" type="submit">Add to Cart</button>
+    <button class="buybutton" type="submit">Buy Now</button>
+  </footer>
+</body>
+
+</html>
